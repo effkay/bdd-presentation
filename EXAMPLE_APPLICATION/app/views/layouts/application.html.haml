@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title BDD Demo Application
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  #notifications
+    - if notice
+      %p.notice= notice
+    - if alert
+      %p.alert= alert
+
+  #container
+    = yield

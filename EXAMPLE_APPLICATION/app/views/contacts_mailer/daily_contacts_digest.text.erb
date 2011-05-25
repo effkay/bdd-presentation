@@ -1,0 +1,11 @@
+Hello Felipe
+
+This is the daily contacts digest. Today the following person(s) registered on firnositu.ch
+
+NEW CONTACTS
+============
+<%- @contacts.each do |contact| %>
+  <%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>) from <%= contact.location %>
+<%- end %>
+
+Gruess, your smoothly running system :-)

@@ -1,0 +1,46 @@
+source 'http://rubygems.org'
+
+gem 'rails', '3.1.0.beta1'
+
+# Default: Asset template engines
+gem 'sass'
+gem 'coffee-script'
+gem 'uglifier'
+gem 'jquery-rails'
+
+# Heroku Specific
+gem 'therubyracer-heroku', '0.8.1.pre3'
+
+# group :production do
+#   gem 'pg'
+# end
+#
+
+gem 'cucumber-rails'
+gem 'cucumber'
+gem 'guard'
+gem 'rspec-rails'
+gem 'guard-rspec'
+gem 'guard-spork'
+gem 'guard-cucumber'
+gem 'capybara'
+gem 'database_cleaner'
+gem 'growl'
+gem 'rb-fsevent'
+
+# Other
+gem 'sqlite3'
+gem 'simple_form'
+gem 'compass'
+gem 'haml'
+
+# gem 'blazing', :git => 'git@github.com:effkay/blazing.git'
+
+group :development do
+  gem 'ruby-debug19', :require => 'ruby-debug'
+end
+
+group :test do
+  # Pretty printed test output
+  gem 'turn', :require => false
+end

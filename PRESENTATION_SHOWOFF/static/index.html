@@ -1,0 +1,354 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>BDD: Behavior Driven Development</title>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+    setupPreso(false, './');
+  });
+  </script>
+</head>
+
+<body>
+
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">&larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">z</td><td>toggle help (this)</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content" ref="main/01_introduction/1">
+<h1>BDD</h1>
+
+<h2>Behavior Driven Development</h2>
+
+<h3>Felipe Kaufmann</h3></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/01_introduction/2">
+<h1>So what is BDD? (1/2)</h1>
+
+<ul>
+<li>an agile software development technique</li>
+<li>aims to bring developers and non-technical stakeholders closer together</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/01_introduction/3">
+<h1>So what is BDD? (2/2)</h1>
+
+<ul>
+<li>originally coined in 2003 by Dan North (JBEhave)</li>
+<li>evolved from an extension of TDD (TDD done well) to much more</li>
+<li>critics still say it's just a fancy word for TDD</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/01_introduction/4">
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/bdd-book.jpg" alt="k"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/01_introduction/5">
+<h1>The Rpec Book says...</h1>
+
+<ul>
+<li><p>Behavior Driven Development is about implementing an application by
+describing its behavior from the perspective of its stakeholders</p></li>
+<li><p><strong>writing software that matters</strong></p></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/01_introduction/6">
+<h1>BDD Principles</h1>
+
+<ul>
+<li>Enough is enough (don't plan to much ahead)</li>
+<li>Up-front analysis, design and planning all have a diminishing return</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/01_introduction/7">
+<h1>BDD Principles</h1>
+
+<ul>
+<li>Deliver stakeholder value (don't do it if it does not add value)</li>
+<li>Any system should have an identified, verifiable value to the business</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/01_introduction/8">
+<h1>BDD Principles</h1>
+
+<ul>
+<li>It's all behavior (everything can be described in behavior)</li>
+<li>Business and Technology should refer to the same system in the same way</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/02_tdd/1">
+<h1>TDD</h1>
+
+<h2>(reminder/short intro)</h2>
+
+<ul>
+<li>write tests before you code (let them drive the code)</li>
+<li>red/green/refactor</li>
+<li>YAGNI</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/02_tdd/2">
+<h1>Some issues with TDD</h1>
+
+<h2>practical issues of the developers</h2>
+
+<ul>
+<li>where to start</li>
+<li>what to test and what not to test</li>
+<li>how much to test in one go</li>
+<li>how to understand why a test fails</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/02_tdd/3">
+<h1>More issues with TDD</h1>
+
+<h2>organizational issue</h2>
+
+<ul>
+<li>(hopefully) written acceptance criteria on story card</li>
+<li>(maybe, some kind of) acceptance criteria in the code</li>
+<li><strong>duplication or divergence</strong></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/02_tdd/4">
+<h1>divergence</h1>
+
+<ul>
+<li><p>the tests in the code do not correspond to the acceptance criteria in
+a user story</p></li>
+<li><p>why not?</p></li>
+<li><p>the are much lower level and to abstract to match business logic</p></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/02_tdd/5">
+<h1>duplication</h1>
+
+<ul>
+<li><p>the tests in the code do test the business logic, and thus do, to some
+extent, represent acceptance criteria. But they can not be understod
+by stakeholders</p></li>
+<li><p>why not?</p></li>
+<li><p>the Stakeholers are non-technical and can not make sense out of Unit
+Tests etc.</p></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/02_tdd/6">
+<h1>We don't know what we are doing!</h1>
+
+<ul>
+<li>because developers and stakeholders have two different view points</li>
+<li>because we don't know what to test and where to start</li>
+<li>because we don't understand what it means when a test fails</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/1">
+<h1>inspect and adapt (1/2)</h1>
+
+<h2>better TDD</h2>
+
+<ul>
+<li><p>tests that work on a higher level and correspond to acceptance
+criterias of a user story</p></li>
+<li><p>tests (or test output) that are understandable by non-technical stakeholders</p></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/2">
+<h1>Pick your tool</h1>
+
+<ul>
+<li>Cucumber (Ruby, Java)</li>
+<li>RSpec (Ruby)</li>
+<li>Concordion (Java)</li>
+<li>JBehave (Java)</li>
+<li>EasyB (Java)</li>
+<li>...</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/03_bdd-practices/3">
+<h1>Cucumber: The Holy Grail of BDD ?</h1>
+
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/holy_grail.jpg" alt=""/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/03_bdd-practices/4">
+<h2>Cucumber Example Input</h2>
+
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/cucumber-input.png" alt=""/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/03_bdd-practices/5">
+<h2>Cucumber Example Output</h2>
+
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/cucumber-output.png" alt=""/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/03_bdd-practices/6">
+<h2>RSpec Example Input</h2>
+
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/rspec-input.png" alt=""/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/03_bdd-practices/7">
+<h2>RSpec Example Output</h2>
+
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/rspec-output.png" alt=""/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/03_bdd-practices/8">
+<h2>agiledox example</h2>
+
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/java.png" alt="java"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/9">
+<h1>inspect and adapt (2/2)</h1>
+
+<h2>clear workflow</h2>
+
+<ul>
+<li>from a business requirement/vision</li>
+<li>to features &amp; user stories</li>
+<li>to acceptance tests and unit tests</li>
+<li>that drives the actual code implementation</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/10">
+<h1>BDD Workflow: Planning</h1>
+
+<h2>Priorization</h2>
+
+<ul>
+<li>establish next best "vision" that will deliver value to the business</li>
+<li>Example: we need potential users for our beta launch</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/11">
+<h1>BDD Workflow: Planning</h1>
+
+<h2>Establish what is needed to achieve the vision</h2>
+
+<ul>
+<li>Product owner wants to inform potential users about the product</li>
+<li>The users want to sign up for the beta if they are interested in the product</li>
+<li>The developer who will have to work with the user data wants that only
+valid emails get trough the signup process</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/12">
+<h1>BDD Workflow: Planning</h1>
+
+<h2>Formalize the requirements with scenarios and examples</h2></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/13">
+<h1>BDD Cycle</h1>
+
+<ul>
+<li>outside in development workflow</li>
+<li>run tests all the time, automatically, while coding</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/03_bdd-practices/14">
+<h1>BDD Cycle</h1>
+
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/bdd-cycle.png" alt="none"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/03_bdd-practices/15">
+<h1>BDD Cycle</h1>
+
+<p><img src="file:///Users/felipe/Sites/bdd-presentation/main/bdd-cycle2.png" alt="none"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/16">
+<h1>The added value of BDD (1/2)</h1>
+
+<ul>
+<li>acceptance criterias of a user story can be formalized</li>
+<li>one clear definition of what is necessary for the user story to be
+complete</li>
+<li>automated testing of acceptance criteria</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/03_bdd-practices/17">
+<h1>The added value of BDD (2/2)</h1>
+
+<ul>
+<li>traceability of any code back to a specific stakeholders need</li>
+<li>clear path for developer on TDD/BDD best-practices and workflow</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/99_conclusion/1">
+<h1>Criticism</h1>
+
+<ul>
+<li>BDD is just a fancy word for TDD</li>
+<li>tools add a new layer of abstraction/complexity + more work</li>
+<li>might be too focused on web development</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/99_conclusion/2">
+<h1>Demo Time!</h1></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/99_conclusion/3">
+<h1>Conclusion</h1>
+
+<ul>
+<li>BDD helps when you get stuck with TDD (workflow)</li>
+<li>Improves inter-project communication trough clearer and formalized
+acceptance tests</li>
+<li>Improves developer involvement due to traceability of business value</li>
+<li>once you try it, you either hate it or never code without</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="main/99_conclusion/4">
+<h1>Questions?</h1></div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="main/99_conclusion/5">
+<h1>Sources</h1>
+
+<ul>
+<li>The RSpec Book (ISBN: 978-1-93435-637-1)</li>
+<li>Blog Post By Dan North: Introducing BDD (http://dannorth.net/introducing-bdd/)</li>
+<li>http://behaviour-driven.org/</li>
+<li>http://stackoverflow.com/questions/1068785/which-bdd-framework-for-java-do-you-use</li>
+<li>http://stackoverflow.com/questions/307895/what-is-the-most-mature-bdd-framework-for-net</li>
+<li>Forum Discussion and Authors's answers about the Rspec Book on: http://forums.pragprog.com/forums/95/topics/3035</li>
+</ul>
+</div>
+</div></div>
+
+</body>
+</html>

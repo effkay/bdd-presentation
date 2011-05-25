@@ -1,0 +1,96 @@
+/* line 1, ../../app/assets/stylesheets/global.sass */
+body {
+  background: black;
+  -moz-background-size: cover;
+  background-size: cover;
+  font-family: Helvetica, Arial;
+}
+
+@media only all and (max-width: 1024px) and (max-height: 677px) {
+  -moz-background-size: 1024px 677px;
+  background-size: 1024px 677px;
+}
+/* line 11, ../../app/assets/stylesheets/global.sass */
+h1, h2 {
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+/* line 15, ../../app/assets/stylesheets/global.sass */
+#container {
+  background-color: white;
+  color: #222222;
+  margin: 20px auto;
+  width: 954px;
+  line-height: 25px;
+  height: 650px;
+}
+/* line 23, ../../app/assets/stylesheets/global.sass */
+#container .column {
+  width: 297px;
+  padding: 10px;
+  float: left;
+  background-color: inherit;
+  height: 100%;
+  border-left: 1px dashed #dddddd;
+}
+
+/* line 31, ../../app/assets/stylesheets/global.sass */
+p {
+  padding: 10px 10px;
+}
+
+/* line 34, ../../app/assets/stylesheets/global.sass */
+form {
+  width: 90%;
+  margin: 0px auto;
+  padding: 0px;
+  padding-bottom: 30px;
+}
+/* line 40, ../../app/assets/stylesheets/global.sass */
+form label {
+  display: block;
+  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+/* line 46, ../../app/assets/stylesheets/global.sass */
+form abbr[title=required] {
+  color: red;
+}
+/* line 49, ../../app/assets/stylesheets/global.sass */
+form input[type=text], form input[type=email], form input[type=password] {
+  display: block;
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid #dddddd;
+  outline: none;
+}
+/* line 57, ../../app/assets/stylesheets/global.sass */
+form input[type=submit] {
+  float: right;
+  margin: 20px auto;
+}
+/* line 61, ../../app/assets/stylesheets/global.sass */
+form span.error {
+  display: block;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+/* line 66, ../../app/assets/stylesheets/global.sass */
+#notifications {
+  margin: 0px auto;
+  margin-top: 100px;
+  width: 954px;
+  background-color: white;
+}
+/* line 71, ../../app/assets/stylesheets/global.sass */
+#notifications p.notice {
+  padding: 10px;
+  color: #90900a;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
