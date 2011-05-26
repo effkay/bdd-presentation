@@ -1,0 +1,7 @@
+Presentation and example code for the "Agile Methodologies and Integrated Software Development" class.
+
+Topic: BDD, Behavior Driven Development
+
+o The original presentation was done with showoff, find it's source in the PRESENTATION_SHOWOFF folder
+o The PRESENTATION folder contains the pptx and the pdf that were handed in over ilias
+o In the EXAMPLE_APPLICATION Folder you find the code used for the demo
